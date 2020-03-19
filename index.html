@@ -7,22 +7,28 @@
     <title>Twitter</title>
 </head>
 <body>
-    <div>
-        <h1>Local Storage</h1>
+    <div class="container">
+        <h1 class="text-center">Local Storage</h1>
         <div>
-            <div>
-                <form action="#">
-                    <label for="tweet">Tweet:</label>
-                    <textarea name="tweet"></textarea>
-                    <button>Agregar</button>
+            <div class="col-s-12 col-m-6 row p-3">
+                <form action="#" id="formulario">
+                    <label class="col-s-12 pb-1" for="tweet">Tweet:</label>
+                    <textarea class="col-s-12 h-80 mb-2" id="tweet" name="tweet"></textarea>
+                    <div class="col-s-12 text-right">
+                        <button class="boton" type="submit">Agregar</button>
+                    </div>
                 </form>
             </div>
-            <div>
-                <h2>Mis Tweets</h2>
-                <div></div>
+            <div class="col-s-12 col-m-6 p-1">
+                <h2 class="text-center">Mis Tweets</h2>
+                <div class="col-s-12" id="lista-tweets"></div>
             </div>
         </div>
     </div>
+
+    <footer class="col-s-12 text-center mt-4 back-darkred text-white">
+        <div class="p-3">229520 - Víctor Adrián Suárez Ruiz</div>
+    </footer>
 
     <script src="app.js"></script>
 </body>

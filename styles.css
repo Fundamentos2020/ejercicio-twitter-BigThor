@@ -3,12 +3,16 @@
     font-family: sans-serif;
 }
 
+html { margin-bottom: 50px; }
 body { margin: 0; }
-
-.container {
-    width: 75%;
-    margin: 0px auto;
-    padding: 0.25em 0.5em;
+textarea {
+    resize: none; 
+    border: 2px solid gray;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 
 /*MODELO DE MALLA*/
@@ -32,6 +36,11 @@ body { margin: 0; }
 }
 
 /*ELEMENTOS FLEX*/
+.flex-container {
+    display: flex;
+    flex-wrap: flex;
+}
+
 .flex-all-center {
     justify-content: center;
     align-content: center;
@@ -64,6 +73,8 @@ body { margin: 0; }
 .p-3 { padding: 1em; }
 .p-4 { padding: 1.5em; }
 .p-5 { padding: 3em; }
+.pb-1 { padding: 0.25em; }
+.py-2 { padding: 0.5em;}
 
 .m-0 { margin: 0; }
 .m-1 { margin: 0.25em; }
@@ -72,6 +83,13 @@ body { margin: 0; }
 .m-4 { margin: 1.5em; }
 .m-5 { margin: 3em; }
 .mx-auto { margin-left: auto; margin-right: auto; }
+.mt-4 { margin-top: 1.5em;}
+.mb-2 { margin-bottom: 0.5em;}
+
+/* COLORES */
+.text-white { color: white; }
+.back-darkred { background-color: darkred; }
+
 
 /*OTROS*/
 .img-fluid {
@@ -106,6 +124,12 @@ body { margin: 0; }
     .w-s-50 { width: 50%; }
     .w-s-75 { width: 75%; }
     .w-s-100 { width: 100%; }
+
+    .container {
+        width: 100%;
+        margin: 0px auto;
+        padding: 0.25em 0.5em;
+    }
 }
 
 @media (min-width: 768px){
@@ -126,7 +150,57 @@ body { margin: 0; }
     .w-m-50 { width: 50%; }
     .w-m-75 { width: 75%; }
     .w-m-100 { width: 100%; }
+
+    .container {
+        width: 75%;
+        margin: 0px auto;
+        padding: 0.25em 0.5em;
+    }
 }
 
 [class*="col-"] { float: left; }
 [class*="flex-"] { display: flex; }
+
+
+/* Estilos personalizados */
+.contenedor-tweet {
+    display: grid;
+    overflow: auto;
+    grid-template-columns: 80px auto 20px;
+}
+
+.img-tweet {
+    float: left;
+}
+
+.texto-tweet {
+    vertical-align: top;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-indent: 0px;
+    clear:both;
+    text-align: justify;
+}
+
+.boton {
+    color: darkred;
+    border: 1px solid darkred;
+    background-color: lightgray;
+    padding: 0.5em;
+}
+
+.borrar-tweet {
+    color: darkred;
+    border: 1px solid darkred;
+    background-color: lightgray;
+    padding: 0.15em;
+    height: fit-content;
+}
+
+.borrar-tweet:hover {
+    cursor:pointer;
+}
+
+.h-80 {
+    height: 80px;
+}
