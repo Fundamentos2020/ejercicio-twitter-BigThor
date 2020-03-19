@@ -25,11 +25,13 @@ function agregarTweet(e){
     
     let divTweet = crearTweetHtml(tweet);
     // Añade el tweet a la lista
-    console.log(divTweet);
     listaTweets.appendChild(divTweet);
 
     // Añadir al local storage
     agregarTweetLocalStorage(tweet);
+
+    // limpia el textarea
+    document.getElementById('tweet').value = "";
 }
 
 // Eliminar tweet de la lista
